@@ -7,7 +7,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #121212; /* Fundo escuro para elegância */
+    background-color: #121212;
     color: #eee;
     transition: background-color 0.3s ease;
 }
@@ -29,7 +29,6 @@ header .logo {
     width: 100px;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 100%;
 }
 
 header h1 {
@@ -84,6 +83,7 @@ header .tagline {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .images img {
@@ -110,4 +110,33 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header .logo {
+        width: 80px;
+    }
+    
+    .history, .gallery {
+        padding: 20px 10px;
+        margin: 10px auto;
+    }
+    
+    .history h2, .gallery h2 {
+        font-size: 1.5em;
+    }
+    
+    .history p, .tagline {
+        font-size: 1em;
+    }
+    
+    .images img {
+        width: 90%; 
+        max-width: 300px;
+    }
 }
