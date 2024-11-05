@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
     background-color: #121212;
     color: #eee;
-    transition: background-color 0.3s ease;
+    overflow-x: hidden; /* Impede a rolagem lateral */
 }
 
 header {
@@ -87,7 +87,8 @@ header .tagline {
 }
 
 .images img {
-    width: 280px;
+    width: 100%;
+    max-width: 280px; /* Limita o tamanho máximo da imagem */
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
@@ -112,7 +113,7 @@ footer p {
     margin: 0;
 }
 
-
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -136,7 +137,7 @@ footer p {
     }
     
     .images img {
-        width: 90%; 
-        max-width: 300px;
+        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+        max-width: 100%;
     }
 }
